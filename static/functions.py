@@ -1,5 +1,5 @@
 import json
-from config import *
+from static.config import *
 
 def getData():
     with open(DATABASE, "r", encoding="utf-8") as file:
@@ -11,20 +11,10 @@ def writeDatabase(data):
             json.dump(data, write_file, indent=4)
     return True
     
-def newProduct():
+def newProduct(new_data):
     data = getData()
     id = len(data)
-    name = input("Digite o nome do produto: ")
-    about = input(f"Digite uma descrição sobre '{name}': ")
-    formula = input(f"Digite a formula de '{name}': ")
     
-    data[id] = {
-        NOME: name,
-        SOBRE: about,
-        FORMULA: formula
-    }
+    data[id] = new_data
     
     writeDatabase(data)
-    
-        
-newProduct()

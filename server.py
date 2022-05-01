@@ -1,4 +1,7 @@
 from flask import Flask, request, url_for, redirect, render_template
+import json
+from static.config import *
+from static.functions import *
 
 app = Flask(__name__)
 
@@ -17,6 +20,24 @@ def home():
             password = request.form.get('password_client')
         
     return render_template('home.html')
+
+@app.route('/new_product/', methods=['GET', 'POST'])
+def getNewProduct():
+    # requests name from client
+    if request.method == 'POST':
+        try:
+            new_data = json.loads(request.json)
+            product = new_data[NOME]
+        except:
+            return False
+        
+        data = getData()
+        if newProduct(new_data):
+            return True
+        else:
+            return False
+    
+    return False
 
 
 if __name__ == '__main__':

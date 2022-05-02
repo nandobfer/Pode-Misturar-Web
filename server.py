@@ -21,23 +21,26 @@ def home():
         
     return render_template('home.html')
 
+@app.route('/home2/')
+def home2():
+    
+    return render_template('login.html')
+
 @app.route('/new_product/', methods=['GET', 'POST'])
 def getNewProduct():
     # requests name from client
     if request.method == 'POST':
         try:
             new_data = json.loads(request.json)
-            product = new_data[NOME]
         except:
-            return False
-        
-        data = getData()
+            return 'False'
+
         if newProduct(new_data):
-            return True
+            return 'True'
         else:
-            return False
+            return 'False'
     
-    return False
+    return 'False'
 
 
 if __name__ == '__main__':

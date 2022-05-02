@@ -35,7 +35,7 @@ def newProduct():
     
     print('\nConectando ao banco de dados, '+ color('yellow', 'aguarde.'))
     post = requests.post(handler_url, json = new_data)
-    response = post.text
+    response = eval(post.text)
     if response:
         print(f"{color('blue', name)} cadastrado com {color('green', 'sucesso')}!\n")
     else:

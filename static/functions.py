@@ -17,4 +17,8 @@ def newProduct(new_data):
     
     data[id] = new_data
     
-    writeDatabase(data)
+    try:
+        writeDatabase(data)
+        return True
+    except:
+        return False

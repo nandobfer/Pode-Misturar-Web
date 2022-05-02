@@ -5,29 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
+    <div class="title-bar">
+        <div class="title-text">
+            <h1 class="title">Pode </h1>
+            <h1 class="title">Misturar?</h1>
+        </div>
+        <img class="img-btn" id="help" src="/static/images/interrogacao.png" alt="Ajuda">
+        <img class="img-btn" src="/static/images/menu.png" alt="Menu" id="menu">
+    </div>
     <div class="container">
         <form method="post">
-            <div class="input">
-                <label for="input-1">Produto 1</label>
-                <input list="input-1">
-                <datalist id="input-1">
-                    <option value="Cloro">
-                    <option value="Detergente">
-                    <option value="Cocô">
-                </datalist>
+            <div class="container-forms">
+                <div class="input-group">
+                    <input list="input-1" name="input-1" placeholder="Produto 1" class="inputs" required>
+                    <datalist id="input-1">
+                        <option value="Cloro">
+                        <option value="Detergente">
+                        <option value="Cocô">
+                    </datalist>
+                </div>
+                <div class="input-group">
+                    <input list="input-2" name="input-2" placeholder="Produto 2" class="inputs" required>
+                    <datalist id="input-2">
+                        <option value="Cloro">
+                        <option value="Detergente">
+                        <option value="Cocô">
+                    </datalist>
+                </div>
             </div>
-            <div class="input">
-                <label for="input-2">Produto 2</label>
-                <input list="input-2">
-                <datalist id="input-2">
-                    <option value="Cloro">
-                    <option value="Detergente">
-                    <option value="Cocô">
-                </datalist>
+            <div class="sum-symbol">
+                <div class="product-image">
+                    <!-- <img src="/static/images/produto" alt="Produto 1"> -->
+                </div>
+                <div class="sum">
+                    <!-- <h1>+</h1> -->
+                </div>
+                <div class="product-image">
+                    <!-- <img src="/static/images/produto" alt="Produto 2"> -->
+                </div>
             </div>
-            <input type="submit" value="VAI">
+            <div class="btn-container">
+                <input type="submit" class="btn" value="Misturar">
+            </div>
         </form>
     </div>
 </body>

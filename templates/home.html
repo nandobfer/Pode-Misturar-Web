@@ -9,6 +9,7 @@
     <script type="text/javascript" src="/static/brython.js"></script>
     <script type="text/javascript" src="/static/brython_stdlib.js"></script>
     <script type="text/python" src="/static/build_datalist.py" id="build_datalist" database="{{database}}"></script>
+    <script type="text/python" src="/static/verify_datalist_input.py"></script>
 </head>
 <body onload="brython()">
     <div class="title-bar">
@@ -20,36 +21,36 @@
         <img class="img-btn" src="/static/images/menu.png" alt="Menu" id="menu">
     </div>
     <div class="container">
-        <form method="post">
+        <!-- <form method="post"> -->
             <div class="container-forms">
-                <div class="input-group">
-                    <input list="input-1" name="input-1" placeholder="Produto 1" class="inputs" required>
+                <div class="input-group" id="input-group-1">
+                    <input id="product-1" list="input-1" name="input-1" placeholder="Produto 1" class="inputs" required>
                     <datalist id="input-1" class="datalist-root">
                         
                     </datalist>
                 </div>
                 <div class="input-group">
-                    <input list="input-2" name="input-2" placeholder="Produto 2" class="inputs" required>
+                    <input id="product-2" list="input-2" name="input-2" placeholder="Produto 2" class="inputs" required>
                     <datalist id="input-2" class="datalist-root">
                         
                     </datalist>
                 </div>
             </div>
-            <div class="sum-symbol">
-                <div class="product-image">
+            <div class="images-container">
+                <div class="product-image" id="product-1-image">
                     <!-- <img src="/static/images/produto" alt="Produto 1"> -->
                 </div>
-                <div class="sum">
+                <div class="sum" id="sum">
                     <!-- <h1>+</h1> -->
                 </div>
-                <div class="product-image">
+                <div class="product-image" id="product-2-image">
                     <!-- <img src="/static/images/produto" alt="Produto 2"> -->
                 </div>
             </div>
             <div class="btn-container">
-                <input type="submit" class="btn" value="Misturar">
+                <button class="btn" value="Misturar">Misturar</button>
             </div>
-        </form>
+        <!-- </form> -->
     </div>
 </body>
 </html>

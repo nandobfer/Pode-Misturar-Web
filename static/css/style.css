@@ -111,7 +111,7 @@ body {
   width: 100%;
 }
 
-.sum-symbol {
+.images-container {
   display: flex;
   align-items: center;
   /* margin-left: auto;
@@ -120,10 +120,32 @@ body {
   color: red;
   height: 50vh;
   padding: 30px;
+  width: 100%;
 }
 
 .sum {
+  position: relative;
   margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+#sum {
+  height: 50%;
+}
+
+.product-image {
+  display: flex;
+  height: 50%;
+}
+
+#product-1-image {
+  position: absolute;
+  left: 0;
+}
+#product-2-image {
+  position: absolute;
+  right: 0;
 }
 
 /* Global */
@@ -137,7 +159,11 @@ body {
 }
 
 .input-group + .input-group {
-  margin-left: 50px;
+  margin-left: 25px;
+}
+
+#input-group-1 {
+  margin-right: 25px;
 }
 
 .input-group input {
@@ -149,7 +175,7 @@ body {
   border-radius: 50px;
   height: 100%;
   width: 100%;
-  font-size: 18px;
+  font-size: 1.28vw;
 
 }
 
@@ -206,7 +232,10 @@ body {
   }
 
   .input-group + .input-group {
-    margin-left: 20px;
+    margin-left: 10px;
+  }
+  #input-group-1 {
+    margin-right: 10px;
   }
  
   #help {
@@ -227,5 +256,13 @@ body {
 
   .btn {
     font-size: 4vw;
+  }
+
+  .product-image {
+    height: 35%;
+  }
+
+  #sum {
+    height: 50%;
   }
 }

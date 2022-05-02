@@ -20,15 +20,21 @@ def color(color, text, reset = True):
 def newProduct():
     global handler_url
 
-    name = input("Digite o "+ color('yellow', 'nome') +" do produto: "+ color('blue', '', False))
+    name = input("Digite o "+ color('yellow', 'nome') +" do produto: "+ color('blue', '', False)).lower()
     print(color('red', ''), end='')
     about = input(f"Digite uma {color('yellow', 'descrição')} sobre {color('blue', name)}: ")
-    formula = input(f"Digite a {color('yellow', 'fórmula')} de {color('blue', name)}: ")
+    image = input(f"Digite o {color('yellow', 'link')} de uma imagem para {color('blue', name)}: ")
+    text = input(f"Digite os {color('yellow', 'produtos')} que {color('blue', name)} não deve ser misturado: ")
+    dont_mix = []
+    while text:
+        dont_mix.append(text)
+        text = input()
     
     data = {
         "Nome": name,
         "Sobre": about,
-        "Formula": formula
+        "Imagem": image,
+        "Perigo": dont_mix
     }
     
     new_data = json.dumps(data)

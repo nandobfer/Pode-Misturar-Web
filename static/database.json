@@ -1,47 +1,18 @@
 {
     "0": {
-        "Nome": "\u00c1gua Sanit\u00e1ria",
+        "Nome": "\u00e1gua sanit\u00e1ria",
         "Sobre": "Serve pra tirar mofo do canto da parede",
-        "Formula": "NaClO"
+        "Imagem": "https://static.clubeextra.com.br/img/uploads/1/651/668651.png",
+        "Perigo": [
+            "vinagre"
+        ]
     },
     "1": {
-        "Nome": "teste",
-        "Sobre": "teste",
-        "Formula": "teste"
-    },
-    "2": {
-        "Nome": "teste",
-        "Sobre": "teste",
-        "Formula": "teste"
-    },
-    "3": {
-        "Nome": "testestes",
-        "Sobre": "testestes",
-        "Formula": "testestse"
-    },
-    "4": {
-        "Nome": "arroz",
-        "Sobre": "feij\u00e3o",
-        "Formula": "ateste"
-    },
-    "5": {
-        "Nome": "teste",
-        "Sobre": "testes",
-        "Formula": "testes"
-    },
-    "6": {
-        "Nome": "teste",
-        "Sobre": "teste",
-        "Formula": "teste"
-    },
-    "7": {
-        "Nome": "teste",
-        "Sobre": "teste",
-        "Formula": "teste"
-    },
-    "8": {
-        "Nome": "Xixi",
-        "Sobre": "Serve pra voc\u00ea beber quando n\u00e3o tiver \u00e1gua",
-        "Formula": "MiJO"
+        "Nome": "vinagre",
+        "Sobre": "limpa coisas",
+        "Imagem": "https://superprix.vteximg.com.br/arquivos/ids/172286-600-600/Vinagre-Unico-Alcool-Colorido-750ml.jpg",
+        "Perigo": [
+            "\u00e1gua sanit\u00e1ria"
+        ]
     }
 }

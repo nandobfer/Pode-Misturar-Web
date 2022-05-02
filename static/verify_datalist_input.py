@@ -4,7 +4,7 @@ from browser import document, alert, html, bind
 database = eval(document['build_datalist'].attrs['database'])
 
 @bind(".inputs", "change")
-def blur(ev):
+def image(ev):
     match = False
     # print(ev.target.value)
     for item in database:

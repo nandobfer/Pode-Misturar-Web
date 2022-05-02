@@ -19,14 +19,16 @@ def home():
             telefone = request.form.get('telefone')
             password = request.form.get('password_client')
         
-    return render_template('home.html')
+    database = getData()
+    
+    return render_template('home.html', database = database)
 
 @app.route('/home2/')
 def home2():
     
     return render_template('login.html')
 
-@app.route('/new_product/', methods=['GET', 'POST'])
+@app.route('/new_product/', methods=['POST'])
 def getNewProduct():
     # requests name from client
     if request.method == 'POST':

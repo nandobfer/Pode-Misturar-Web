@@ -12,7 +12,18 @@
         "Sobre": "limpa coisas",
         "Imagem": "https://superprix.vteximg.com.br/arquivos/ids/172286-600-600/Vinagre-Unico-Alcool-Colorido-750ml.jpg",
         "Perigo": [
-            "\u00e1gua sanit\u00e1ria"
+            "\u00e1gua sanit\u00e1ria",
+            "alvejante"
+        ]
+    },
+    "2": {
+        "Nome": "alvejante",
+        "Sobre": "serve para alvejar",
+        "Imagem": "http://www.crivialli.com.br/uploads/produtos/alvejante-sempre-viva-collors-2l-1562677120.png",
+        "Perigo": [
+            "vinagre",
+            "mijo",
+            "coco"
         ]
     }
 }

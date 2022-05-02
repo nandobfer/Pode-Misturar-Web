@@ -1,6 +1,6 @@
 import json, requests, os
 
-handler_url = 'http://localhost:5000/new_product/'
+handler_url = 'http://54.145.39.200/new_product/'
 
 def color(color, text, reset = True):
     os.system('color')
@@ -17,7 +17,7 @@ def color(color, text, reset = True):
     else:
         return colors[color]+text
 
-def newProduct():
+def newProduct(url = handler_url):
     global handler_url
 
     name = input("Digite o "+ color('yellow', 'nome') +" do produto: "+ color('blue', '', False)).lower()
@@ -40,11 +40,17 @@ def newProduct():
     new_data = json.dumps(data)
     
     print('\nConectando ao banco de dados, '+ color('yellow', 'aguarde.'))
-    post = requests.post(handler_url, json = new_data)
+    post = requests.post(url, json = new_data)
     response = eval(post.text)
     if response:
         print(f"{color('blue', name)} cadastrado com {color('green', 'sucesso')}!\n")
     else:
         print(color('red', 'Não foi possível cadastrar o produto.\n'))
     
-newProduct()
+
+if __name__ == '__main__':
+    print('Conectado ao servidor local')
+    newProduct('http://localhost:5000/new_product/')
+else:
+    print('Acessando ' + handler_url)
+    

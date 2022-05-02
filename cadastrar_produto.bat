@@ -1,3 +1,3 @@
 @echo off
-python new_product.py
+python -c "import new_product;new_product.newProduct()"
 @pause

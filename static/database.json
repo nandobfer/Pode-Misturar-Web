@@ -25,5 +25,14 @@
             "mijo",
             "coco"
         ]
+    },
+    "3": {
+        "Nome": "thc",
+        "Sobre": "\u00c9 bem loko",
+        "Imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Delta-9-tetrahydrocannabinol-from-tosylate-xtal-3D-balls.png/200px-Delta-9-tetrahydrocannabinol-from-tosylate-xtal-3D-balls.png",
+        "Perigo": [
+            "Alcool",
+            "Cocaina"
+        ]
     }
 }
